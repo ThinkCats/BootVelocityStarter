@@ -1,6 +1,6 @@
 package com.busi.service;
 
-import com.busi.framework.annotation.Loggable;
+import com.busi.interceptor.annotation.Loggable;
 import org.springframework.stereotype.Service;
 
 /**
@@ -18,6 +18,7 @@ public class AtomicServiceImpl implements AtomicService {
     @Override
     @Loggable(desc = "apiTwo")
     public void doApiTwo() {
-        System.out.println("do api two");
+        System.out.println("do api Exception");
+        System.out.println(2/0);
     }
 }

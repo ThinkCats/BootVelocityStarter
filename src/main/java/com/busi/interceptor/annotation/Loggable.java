@@ -1,4 +1,4 @@
-package com.busi.framework.annotation;
+package com.busi.interceptor.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
