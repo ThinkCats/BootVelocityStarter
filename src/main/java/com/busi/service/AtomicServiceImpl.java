@@ -12,7 +12,7 @@ public class AtomicServiceImpl implements AtomicService {
 
     @Override
     @Loggable(desc = "apiOne")
-    public void doApiOne(@SerialNumber("hehe")String serial) {
+    public void doApiOne(@SerialNumber("hehe")String number,String other) {
         System.out.println("do api one");
     }
 
@@ -20,6 +20,6 @@ public class AtomicServiceImpl implements AtomicService {
     @Loggable(desc = "apiTwo")
     public void doApiTwo() {
         System.out.println("do api Exception");
-        System.out.println(2/0);
+//        System.out.println(2/0);
     }
 }

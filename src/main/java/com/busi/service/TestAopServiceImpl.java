@@ -19,7 +19,7 @@ public class TestAopServiceImpl implements TestAopService {
 
     @Override
     public void todo() {
-        atomicService.doApiOne("888888");
+        atomicService.doApiOne("888888","干扰信息");
         atomicService.doApiTwo();
     }
 
