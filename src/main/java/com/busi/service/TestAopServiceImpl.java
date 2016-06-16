@@ -1,6 +1,7 @@
 package com.busi.service;
 
 import com.busi.framework.annotation.Loggable;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -9,9 +10,19 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class TestAopServiceImpl implements TestAopService {
+    @Autowired
+    private AtomicService atomicService;
+
     @Override
-    @Loggable(desc = "hehehe")
     public void testAop() {
-        System.out.println("this is test aop");
+        todo();
     }
+
+    @Override
+    public void todo() {
+        System.out.println("this is todo");
+        atomicService.doApiOne();
+        atomicService.doApiTwo();
+    }
+
 }

@@ -5,4 +5,5 @@ package com.busi.service;
  */
 public interface TestAopService {
     void testAop();
+    void todo();
 }

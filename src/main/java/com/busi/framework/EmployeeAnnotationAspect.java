@@ -18,9 +18,9 @@ public class EmployeeAnnotationAspect {
     public Object doSome(ProceedingJoinPoint joinPoint) throws Throwable {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Loggable loggable = signature.getMethod().getAnnotation(Loggable.class);
-        System.out.println("--------- before desc:"+loggable.desc());
+        System.out.println("--------- before check:"+loggable.desc());
         Object result =  joinPoint.proceed();
-        System.out.println("---------- after desc:"+loggable.desc());
+        System.out.println("---------- after check:"+loggable.desc());
         return result;
     }
 }

@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * Created by wanglei on 16/6/15.
  */
-@Target(ElementType.METHOD)
+@Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Loggable {
     String desc() default "";
