@@ -20,7 +20,7 @@ public class TestAopServiceImpl implements TestAopService {
 
     @Override
     public void todo() {
-        System.out.println("this is todo");
+        System.out.println("this is todo service");
         atomicService.doApiOne();
         atomicService.doApiTwo();
     }
