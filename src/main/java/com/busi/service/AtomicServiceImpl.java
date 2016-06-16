@@ -1,6 +1,7 @@
 package com.busi.service;
 
 import com.busi.interceptor.annotation.Loggable;
+import com.busi.interceptor.annotation.SerialNumber;
 import org.springframework.stereotype.Service;
 
 /**
@@ -11,7 +12,7 @@ public class AtomicServiceImpl implements AtomicService {
 
     @Override
     @Loggable(desc = "apiOne")
-    public void doApiOne() {
+    public void doApiOne(@SerialNumber("hehe")String serial) {
         System.out.println("do api one");
     }
 
