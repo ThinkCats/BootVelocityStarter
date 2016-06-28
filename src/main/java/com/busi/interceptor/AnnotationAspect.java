@@ -55,7 +55,7 @@ public class AnnotationAspect {
             }
         }
 
-        System.out.println("serial number:" + serialNum);
+        System.out.println("serial number: " + serialNum);
 
         resolver.doBefore(loggable, serialNum);
         Object result = joinPoint.proceed();

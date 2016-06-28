@@ -12,7 +12,7 @@ import org.springframework.core.env.Environment;
  */
 
 @Configuration
-@PropertySource("classpath:application-${env}.properties")
+@PropertySource("classpath:application.properties")
 public class PropertyConfig implements EnvironmentAware {
 
     private Environment environment;
