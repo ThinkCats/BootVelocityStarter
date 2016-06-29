@@ -8,5 +8,5 @@ Main
 #end
 
 #define($content)
-    Hello Velocity Boot !
+    Hello Velocity Boot !!
 #end
