@@ -1,7 +1,9 @@
 ### NOTE
-	1.if using other database, please change jdbc driver class
-	2.Default User login: admin / 12345
-	3.Add custom annotation and aop process
+	1.Default User login: admin / 12345
+
+
+### UPDATE(2016-07-05)
+    1. Add H2 Database Support
 
 ### UPDATE (2016-07-05)
     1. Add Download
@@ -17,8 +19,9 @@
      ```
 
 ### UPDATE
-    1.Add a custom method annotation : @Loggable
-    2.Add a custom method param annotation : @SerialNumber
+    1.Add custom annotation and aop process
+        * Add a custom method annotation : @Loggable
+        * Add a custom method param annotation : @SerialNumber
 
 
 
