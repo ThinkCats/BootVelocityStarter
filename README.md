@@ -3,7 +3,7 @@
 	2.Default User login: admin / 12345
 	3.Add custom annotation and aop process
 
-### UPDATE (201616-07-05)
+### UPDATE (2016-07-05)
     1. Add Download
         * Using HttpServletResponse (void method)
         * Using Spring HttpEntity
