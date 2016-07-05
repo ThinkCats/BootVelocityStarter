@@ -21,7 +21,6 @@ public class IndexController {
     @RequestMapping(value = "",method = RequestMethod.GET)
     public String home(){
         testAopService.testAop();
-        System.out.println("test!!?");
         return "index";
     }
 }

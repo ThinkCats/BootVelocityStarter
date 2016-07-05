@@ -3,6 +3,7 @@ package com.busi.interceptor;
 import com.busi.interceptor.annotation.Loggable;
 import com.busi.interceptor.annotation.SerialNumber;
 import com.busi.interceptor.resolver.AnnotationResolver;
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
@@ -19,6 +20,7 @@ import java.util.Map;
 /**
  * Created by wanglei on 16/6/15.
  */
+@Slf4j
 @Aspect
 @Component
 public class AnnotationAspect {
@@ -55,7 +57,7 @@ public class AnnotationAspect {
             }
         }
 
-        System.out.println("serial number: " + serialNum);
+        log.info("serial number: " + serialNum);
 
         resolver.doBefore(loggable, serialNum);
         Object result = joinPoint.proceed();
