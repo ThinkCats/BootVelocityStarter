@@ -39,4 +39,11 @@ public class DemoApplicationTests {
         log.info("result:" + list.toString());
     }
 
+    @Test
+    public void addData(){
+        String sql = "INSERT INTO users VALUES (4, 'joel', 'joel@gmail.com');";
+        template.execute(sql);
+        testDataAccess();
+    }
+
 }
