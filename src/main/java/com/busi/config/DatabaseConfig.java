@@ -1,11 +1,10 @@
 package com.busi.config;
 
-import org.springframework.context.annotation.Bean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
+import org.springframework.jdbc.core.JdbcTemplate;
 
-import javax.sql.DataSource;
+import javax.annotation.PostConstruct;
 
 /**
  * Created by wl on 16/7/5.
@@ -14,15 +13,15 @@ import javax.sql.DataSource;
 @Configuration
 public class DatabaseConfig {
 
-    @Bean
-    public DataSource dataSource(){
-        return new EmbeddedDatabaseBuilder()
-                .generateUniqueName(true)
-                .setType(EmbeddedDatabaseType.H2)
-                .setScriptEncoding("UTF-8")
-                .ignoreFailedDrops(true)
-                .addScript("res/sql/schema.sql")
-                .addScripts("res/sql/data.sql")
-                .build();
+    @Autowired
+    private JdbcTemplate template;
+
+    @PostConstruct
+    public void initDB(){
+        template.execute("CREATE TABLE IF NOT EXISTS users (\n" +
+                "  id         INTEGER PRIMARY KEY,\n" +
+                "  name VARCHAR(30),\n" +
+                "  email  VARCHAR(50)\n" +
+                ");");
     }
 }
