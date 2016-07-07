@@ -21,10 +21,10 @@ public class DatabaseConfig {
     @PostConstruct
     public void initDB(){
         log.info("====> DB Init");
-        template.execute("CREATE TABLE IF NOT EXISTS users (\n" +
-                "  id         INTEGER PRIMARY KEY,\n" +
-                "  name VARCHAR(30),\n" +
-                "  email  VARCHAR(50)\n" +
-                ");");
+//        template.execute("CREATE TABLE IF NOT EXISTS users (\n" +
+//                "  id         INTEGER PRIMARY KEY,\n" +
+//                "  name VARCHAR(30),\n" +
+//                "  email  VARCHAR(50)\n" +
+//                ");");
     }
 }

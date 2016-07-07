@@ -24,7 +24,7 @@ public class H2Test extends DemoApplicationTests {
 
     @Test
     public void addData() {
-        String sql = "INSERT INTO users VALUES (4, 'joel', 'joel@gmail.com');";
+        String sql = "INSERT INTO users VALUES (4, 'joel');";
         template.execute(sql);
         testDataAccess();
     }

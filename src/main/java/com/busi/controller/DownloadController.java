@@ -69,7 +69,7 @@ public class DownloadController {
 
     private File getFile(){
         ResourceLoader loader = new DefaultResourceLoader();
-        Resource resource = loader.getResource(ResourceLoader.CLASSPATH_URL_PREFIX + "res/pdf/template.pdf");
+        Resource resource = loader.getResource(ResourceLoader.CLASSPATH_URL_PREFIX + "pdf/template.pdf");
         try {
             File file = new File(resource.getURL().getPath());
             if (!file.exists()){

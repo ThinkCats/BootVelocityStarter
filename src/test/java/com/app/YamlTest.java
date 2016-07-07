@@ -22,7 +22,7 @@ public class YamlTest extends DemoApplicationTests {
     public void testYaml() {
         ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
         ResourceLoader loader = new DefaultResourceLoader();
-        Resource resource = loader.getResource("res/config/test.yml");
+        Resource resource = loader.getResource("config/yml/test.yml");
         try {
             TestModel model = mapper.readValue(resource.getInputStream(), TestModel.class);
             log.info("model:" + model.toString());

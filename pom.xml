@@ -90,6 +90,7 @@
 	</dependencies>
 	
 	<build>
+
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -103,7 +104,27 @@
 				</dependencies>
 			</plugin>
 		</plugins>
-	</build>
+
+        <resources>
+
+            <resource>
+                <directory>config/</directory>
+                <includes>
+                    <include>**/**</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+
+            <resource>
+                <directory>sql/</directory>
+                <includes>
+                    <include>**/**</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+
+    </build>
 
 	<repositories>
 		<repository>
