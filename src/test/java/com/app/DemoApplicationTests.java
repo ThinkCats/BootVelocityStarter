@@ -26,24 +26,8 @@ import java.util.List;
 @WebAppConfiguration
 public class DemoApplicationTests {
 
-    @Autowired
-    private JdbcTemplate template;
-
     @Test
     public void test() {
-    }
-
-    @Test
-    public void testDataAccess() {
-        List list = template.queryForList("select * from users");
-        log.info("result:" + list.toString());
-    }
-
-    @Test
-    public void addData(){
-        String sql = "INSERT INTO users VALUES (4, 'joel', 'joel@gmail.com');";
-        template.execute(sql);
-        testDataAccess();
     }
 
 }
