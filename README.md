@@ -1,6 +1,8 @@
 ### NOTE
 	1.Default User login: admin / 12345
 
+### UPDATE(2016-07-06)
+    1. YAML File Parse Support
 
 ### UPDATE(2016-07-05)
     1. Add H2 Database Support
