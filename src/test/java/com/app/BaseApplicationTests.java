@@ -17,14 +17,13 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import javax.sql.DataSource;
 import java.util.List;
 
-@Slf4j
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan(value = "com.busi.**")
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = App.class)
 @WebAppConfiguration
-public class DemoApplicationTests {
+public class BaseApplicationTests {
 
     @Test
     public void test() {

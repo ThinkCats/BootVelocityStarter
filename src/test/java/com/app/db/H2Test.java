@@ -1,5 +1,6 @@
-package com.app;
+package com.app.db;
 
+import com.app.BaseApplicationTests;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import java.util.List;
  * Created by wl on 16/7/7.
  */
 @Slf4j
-public class H2Test extends DemoApplicationTests {
+public class H2Test extends BaseApplicationTests {
 
     @Autowired
     private JdbcTemplate template;

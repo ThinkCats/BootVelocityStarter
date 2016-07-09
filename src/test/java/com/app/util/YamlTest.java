@@ -1,5 +1,6 @@
-package com.app;
+package com.app.util;
 
+import com.app.BaseApplicationTests;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import lombok.Data;
@@ -16,7 +17,7 @@ import java.io.IOException;
  */
 
 @Slf4j
-public class YamlTest extends DemoApplicationTests {
+public class YamlTest extends BaseApplicationTests {
 
     @Test
     public void testYaml() {
