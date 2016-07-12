@@ -49,4 +49,9 @@ public class IndexController {
         request.setAttribute("msg", msg);
         return "index";
     }
+
+    @RequestMapping(value = "logs")
+    public String log() {
+        return "log";
+    }
 }
