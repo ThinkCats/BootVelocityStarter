@@ -1,5 +1,6 @@
-### NOTE
-	1.Default User login: admin / 12345
+### UPDATE(2017-07-25)
+    1. Using  thymeleaf instead of velocity
+    2. Add Spring Security & JPA
 
 ### UPDATE(2016-07-12)
     1.WebSocket Support

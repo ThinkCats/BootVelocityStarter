@@ -4,6 +4,7 @@ import com.busi.service.TestAopService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,13 +20,13 @@ import javax.servlet.http.HttpSession;
 @Slf4j
 @RequestMapping("/")
 @Controller
-public class IndexController {
+public class ViewController {
 
     @Autowired
     private TestAopService testAopService;
 
-    @RequestMapping(value = "", method = RequestMethod.GET)
-    public String home(HttpServletResponse response, HttpServletRequest request) {
+    @RequestMapping(value = "/index.html", method = RequestMethod.GET)
+    public String home(HttpServletResponse response, HttpServletRequest request, ModelMap modelMap) {
 
         //Cookie
         Cookie cookie = new Cookie("foo", "bar");
@@ -38,6 +39,8 @@ public class IndexController {
         session.setMaxInactiveInterval(60);
 
         testAopService.testAop();
+
+        modelMap.addAttribute("message","hello world");
         return "index";
     }
 
@@ -54,4 +57,11 @@ public class IndexController {
     public String log() {
         return "log";
     }
+
+    @RequestMapping(value = "backend")
+    public String backend(ModelMap modelMap){
+        modelMap.addAttribute("msg","some admin msg");
+        return "authed";
+    }
+
 }
