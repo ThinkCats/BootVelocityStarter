@@ -1,3 +1,10 @@
+### UPDATE(2017-09-18)
+    1. Test Spring Transaction: 
+        Transaction rolled back because it has been marked as rollback-only
+    2. Solved way:
+        1)  remove the final method's transaction
+        2)  the exception in the final transaction should be catche, throw the exception to the final method caller.  
+
 ### UPDATE(2017-07-25)
     1. Using  thymeleaf instead of velocity
     2. Add Spring Security & JPA
