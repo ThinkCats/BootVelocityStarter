@@ -23,6 +23,9 @@ public class EmailListener {
     @TransactionalEventListener
     public void emallSendEvent(Users users) {
         log.info("Begin Email Event:" + users.toString());
+        Users u = usersRepository.findByUsername("testEvent");
+        String newUserName = u.getUsername() + users.getUsername();
+        users.setUsername(newUserName);
         usersRepository.save(users);
     }
 }
