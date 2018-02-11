@@ -1,4 +1,4 @@
-package com.busi.service;
+package com.busi.service.aop;
 
 /**
  * Created by wanglei on 16/6/15.

@@ -1,3 +1,8 @@
+### UPDATE(2018-02-11)
+    1. Update Transaction Config
+    2. Add Spring Async Event 
+
+
 ### UPDATE(2017-09-18)
     1. Test Spring Transaction: 
         Transaction rolled back because it has been marked as rollback-only
