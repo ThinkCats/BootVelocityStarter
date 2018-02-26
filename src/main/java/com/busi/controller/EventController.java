@@ -26,4 +26,11 @@ public class EventController {
         testEventService.doSomethingBeforeSendEmail();
         return new Result(true, "OK");
     }
+
+    @RequestMapping("/trans")
+    @ResponseBody
+    public Result doTrans() {
+        testEventService.doSomethingWithRollback();
+        return new Result(true, "OK!");
+    }
 }

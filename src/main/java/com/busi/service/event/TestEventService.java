@@ -8,4 +8,6 @@ public interface TestEventService {
 
     void doSomethingBeforeSendEmail();
 
+    void doSomethingWithRollback();
+
 }
