@@ -6,7 +6,7 @@ import com.busi.interceptor.annotation.Table;
  * @author WangLei
  * on 2018/3/8
  */
-@Table
+@Table(name = "other_name")
 public class OtherTable {
     private String msg;
 

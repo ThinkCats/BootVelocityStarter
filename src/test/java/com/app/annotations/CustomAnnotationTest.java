@@ -18,6 +18,9 @@ public class CustomAnnotationTest {
         Reflections reflections = new Reflections(packageName);
         Set<Class<?>> classList = reflections.getTypesAnnotatedWith(Table.class);
         for (Class classes : classList) {
+            Table table = (Table) classes.getAnnotation(Table.class);
+            System.out.println(table.name());
+            System.out.println(table.isPrimary());
             System.out.println(classes.toString());
         }
     }

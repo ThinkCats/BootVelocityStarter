@@ -6,7 +6,7 @@ import com.busi.interceptor.annotation.Table;
  * @author WangLei
  * on 2018/3/8
  */
-@Table(isPrimayTable = true)
+@Table(isPrimary = true, name = "my_table")
 public class MyTable {
     private String name;
 
