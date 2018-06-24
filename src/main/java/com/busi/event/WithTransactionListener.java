@@ -31,5 +31,6 @@ public class WithTransactionListener {
         users.setPassword(event.getMsg());
         users.setEnabled(0);
         usersRepository.save(users);
+        System.out.println(1 / 0);
     }
 }

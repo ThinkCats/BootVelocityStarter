@@ -4,8 +4,10 @@ import com.busi.domain.Users;
 import com.busi.domain.UsersRepository;
 import com.busi.event.entity.TestEvent;
 import com.busi.event.entity.UserEvent;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @author WangLei
  * on 2018/2/9
  */
+@Slf4j
 @Service
 public class TestEventServiceImpl implements TestEventService {
 
@@ -34,7 +37,16 @@ public class TestEventServiceImpl implements TestEventService {
         eventUser.setEnabled(0);
         eventUser.setUsername("EventName");
         eventUser.setPassword("EventPassword");
+        log.info("=======> send event");
         applicationEventPublisher.publishEvent(eventUser);
+        log.info("=======> send over");
+        try {
+            Thread.sleep(5000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        log.info("========> Main process over");
+
     }
 
     @Override
