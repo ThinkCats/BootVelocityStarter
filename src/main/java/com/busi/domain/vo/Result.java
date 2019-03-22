@@ -15,4 +15,9 @@ public class Result {
         this.success = success;
         this.msg = msg;
     }
+
+    public static Result success(String msg){
+        return new Result(true,msg);
+    }
+
 }

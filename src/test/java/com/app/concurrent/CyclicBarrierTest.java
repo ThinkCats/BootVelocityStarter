@@ -12,7 +12,7 @@ import java.util.concurrent.CyclicBarrier;
 public class CyclicBarrierTest {
     public static void main(String[] args) {
         Runnable lastTask = () -> System.out.println("this is last Task");
-        CyclicBarrier barrier = new CyclicBarrier(5, lastTask);
+        CyclicBarrier barrier = new CyclicBarrier(3, lastTask);
         new SubTask("A", barrier).start();
         new SubTask("B", barrier).start();
         new SubTask("C", barrier).start();

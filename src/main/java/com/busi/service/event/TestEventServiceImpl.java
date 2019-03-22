@@ -41,7 +41,7 @@ public class TestEventServiceImpl implements TestEventService {
         applicationEventPublisher.publishEvent(eventUser);
         log.info("=======> send over");
         try {
-            Thread.sleep(5000L);
+            Thread.sleep(15000L);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

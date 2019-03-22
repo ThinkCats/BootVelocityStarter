@@ -40,7 +40,7 @@ public class EmailListener {
         usersRepository.save(users);
         count++;
         log.info("****** event over");
-        System.out.println(1 / 0);
+        System.out.println(1/0);
     }
 
 }

@@ -8,6 +8,8 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -46,6 +48,6 @@ public class UserSecurityServiceImpl implements UserDetailsService {
             log.info("group name:{}", group.getGroupName());
             authorities.add(new SimpleGrantedAuthority(group.getGroupName()));
         }
-        return new User(user.getUsername(), user.getPassword(), authorities);
+        return User.withUsername(user.getUsername()).password("{noop}" + user.getPassword()).authorities(authorities).build();
     }
 }

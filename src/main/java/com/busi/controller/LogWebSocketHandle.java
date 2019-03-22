@@ -32,8 +32,9 @@ public class LogWebSocketHandle extends Endpoint {
     @Override
     public void onClose(Session session, CloseReason closeReason) {
         try {
-            if (inputStream != null)
+            if (inputStream != null) {
                 inputStream.close();
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
